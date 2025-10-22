@@ -1,29 +1,49 @@
-import { motion } from 'framer-motion';
-import { Code2, Palette, Rocket, Server } from 'lucide-react';
-import { useInView } from 'react-intersection-observer';
-import Timeline from '../components/Timeline';
-import SkillBadge from '../components/SkillBadge';
+import { motion } from "framer-motion";
+import { Code2, Palette, Rocket, Server } from "lucide-react";
+import { useInView } from "react-intersection-observer";
+import Timeline from "../components/Timeline";
+import SkillBadge from "../components/SkillBadge";
 
 const skills = [
-  { name: 'Frontend Development', icon: Code2, description: 'Creating responsive and interactive user interfaces with React, TypeScript, and modern CSS.' },
-  { name: 'Backend Development', icon: Server, description: 'Building scalable APIs and server-side applications with Node.js and Python.' },
-  { name: 'UI/UX Design', icon: Palette, description: 'Designing intuitive and beautiful user experiences with attention to detail.' },
-  { name: 'DevOps', icon: Rocket, description: 'Managing deployment, CI/CD pipelines, and cloud infrastructure.' }
+  {
+    name: "Frontend Development",
+    icon: Code2,
+    description:
+      "Creating responsive and interactive user interfaces with React, TypeScript, and modern CSS.",
+  },
+  {
+    name: "Backend Development",
+    icon: Server,
+    description:
+      "Building scalable APIs and server-side applications with Node.js and Python.",
+  },
+  {
+    name: "UI/UX Design",
+    icon: Palette,
+    description:
+      "Designing intuitive and beautiful user experiences with attention to detail.",
+  },
+  {
+    name: "DevOps",
+    icon: Rocket,
+    description:
+      "Managing deployment, CI/CD pipelines, and cloud infrastructure.",
+  },
 ];
 
 const technicalSkills = [
-  { name: 'React/Next.js', level: 95, color: 'bg-blue-500' },
-  { name: 'TypeScript', level: 90, color: 'bg-blue-500' },
-  { name: 'Node.js', level: 85, color: 'bg-green-500' },
-  { name: 'Python', level: 80, color: 'bg-yellow-500' },
-  { name: 'AWS', level: 75, color: 'bg-orange-500' },
-  { name: 'Docker', level: 70, color: 'bg-blue-500' }
+  { name: "React/Next.js", level: 95, color: "bg-blue-500" },
+  { name: "TypeScript", level: 90, color: "bg-blue-500" },
+  { name: "Node.js", level: 85, color: "bg-green-500" },
+  { name: "Python", level: 80, color: "bg-yellow-500" },
+  { name: "AWS", level: 75, color: "bg-orange-500" },
+  { name: "Docker", level: 70, color: "bg-blue-500" },
 ];
 
 export default function AboutPage() {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   return (
@@ -38,13 +58,14 @@ export default function AboutPage() {
           >
             <h1 className="text-5xl font-bold mb-6">About Me</h1>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              I'm a passionate Full Stack Developer with a keen eye for design and a love for creating
-              seamless digital experiences. With years of experience in web development,
-              I bring ideas to life through code.
+              I'm a passionate Full Stack Developer with a keen eye for design
+              and a love for creating seamless digital experiences. With years
+              of experience in web development, I bring ideas to life through
+              code.
             </p>
           </motion.div>
 
-          <div 
+          <div
             ref={ref}
             className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20"
           >
@@ -75,7 +96,9 @@ export default function AboutPage() {
             transition={{ delay: 0.4 }}
             className="mb-20"
           >
-            <h2 className="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">
+              Technical Skills
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
               {technicalSkills.map((skill, index) => (
                 <motion.div

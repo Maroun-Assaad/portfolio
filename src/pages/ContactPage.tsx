@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, MessageSquare, Send, Linkedin, Github } from "lucide-react";
+import { siteConfig } from "../site.config";
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -40,7 +41,7 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold mb-6">Contact Information</h2>
               <div className="space-y-6">
                 <a
-                  href="mailto:your.email@example.com"
+                  href={`mailto:${siteConfig.email}`}
                   className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors"
                 >
                   <div className="p-3 bg-blue-500/10 rounded-lg">
@@ -48,11 +49,11 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-sm">your.email@example.com</p>
+                    <p className="text-sm">{siteConfig.email}</p>
                   </div>
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href={siteConfig.socials.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors"
@@ -66,7 +67,7 @@ export default function ContactPage() {
                   </div>
                 </a>
                 <a
-                  href="https://github.com"
+                  href={siteConfig.socials.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors"

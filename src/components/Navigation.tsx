@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
 import { Github, Linkedin, Mail, Menu, X } from "lucide-react";
+import { siteConfig } from "../site.config";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,8 +38,14 @@ export default function Navigation() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4">
         <nav className="flex items-center justify-between">
-          <NavLink to="/" className="text-5xl font-bold text-blue-500">
-            MA
+          <NavLink
+            to="/"
+            className="text-2xl font-bold text-white tracking-tight"
+          >
+            {siteConfig.name
+              .split(" ")
+              .map((n) => n[0])
+              .join("")}
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -48,8 +55,8 @@ export default function Navigation() {
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-${
-                    isActive ? "white" : "gray-400"
+                  `${
+                    isActive ? "text-white" : "text-gray-400"
                   } hover:text-white transition-colors`
                 }
               >
@@ -58,7 +65,7 @@ export default function Navigation() {
             ))}
             <div className="flex gap-4 ml-6">
               <a
-                href="https://github.com"
+                href={siteConfig.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -66,7 +73,7 @@ export default function Navigation() {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href={siteConfig.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -74,7 +81,7 @@ export default function Navigation() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href={`mailto:${siteConfig.email}`}
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Mail size={20} />
@@ -103,8 +110,8 @@ export default function Navigation() {
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `block text-${
-                    isActive ? "white" : "gray-400"
+                  `block ${
+                    isActive ? "text-white" : "text-gray-400"
                   } hover:text-white transition-colors`
                 }
               >
@@ -113,7 +120,7 @@ export default function Navigation() {
             ))}
             <div className="flex gap-4 pt-4">
               <a
-                href="https://github.com"
+                href={siteConfig.socials.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -121,7 +128,7 @@ export default function Navigation() {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com"
+                href={siteConfig.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors"
@@ -129,7 +136,7 @@ export default function Navigation() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="mailto:your.email@example.com"
+                href={`mailto:${siteConfig.email}`}
                 className="text-gray-400 hover:text-white transition-colors"
               >
                 <Mail size={20} />

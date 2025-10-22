@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import { siteConfig } from "../site.config";
 
 export default function HomePage() {
   return (
@@ -20,7 +21,8 @@ export default function HomePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            Hi, I'm <span className="text-blue-500">Maroun Assaad</span>
+            {siteConfig.hero.headline.replace("Maroun Assaad", "")}
+            <span className="text-blue-500">{siteConfig.name}</span>
           </motion.h1>
 
           <motion.p
@@ -29,7 +31,7 @@ export default function HomePage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Full Stack Developer crafting exceptional digital experiences
+            {siteConfig.hero.subheadline}
           </motion.p>
 
           <motion.div
@@ -42,14 +44,14 @@ export default function HomePage() {
               to="/projects"
               className="group flex items-center justify-center gap-2 bg-blue-500 text-white px-8 py-3 rounded-full hover:bg-blue-600 transition-colors"
             >
-              View My Work
+              {siteConfig.hero.ctaPrimary}
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/contact"
               className="flex items-center justify-center gap-2 border border-gray-700 text-white px-8 py-3 rounded-full hover:bg-white/10 transition-colors"
             >
-              Get in Touch
+              {siteConfig.hero.ctaSecondary}
             </Link>
           </motion.div>
         </motion.div>

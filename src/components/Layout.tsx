@@ -1,7 +1,8 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Outlet, useLocation } from 'react-router-dom';
-import Navigation from './Navigation';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Outlet, useLocation } from "react-router-dom";
+import Navigation from "./Navigation";
+import { siteConfig } from "../site.config";
 
 export default function Layout() {
   const location = useLocation();
@@ -21,7 +22,9 @@ export default function Layout() {
         </motion.main>
       </AnimatePresence>
       <footer className="bg-black text-gray-400 py-8 text-center">
-        <p>© {new Date().getFullYear()} Your Name. All rights reserved.</p>
+        <p>
+          © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+        </p>
       </footer>
     </div>
   );
