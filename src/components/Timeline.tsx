@@ -1,41 +1,46 @@
-import React from 'react';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { Briefcase, GraduationCap, Award } from 'lucide-react';
+import React from "react";
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { Briefcase, GraduationCap, Award } from "lucide-react";
 
 const timelineData = [
   {
-    title: "Senior Full Stack Developer",
-    company: "Tech Company",
-    date: "2022 - Present",
-    description: "Led development of enterprise applications using React, Node.js, and AWS.",
+    title: "Front-End Developer",
+    company: "Tech & Beyond LLC",
+    date: "2024 - Present",
+    description:
+      "Worked on building responsive web applications for a client of the company.",
     icon: Briefcase,
-    category: "work"
+    category: "work",
   },
   {
     title: "Full Stack Developer",
     company: "Digital Agency",
     date: "2020 - 2022",
-    description: "Developed and maintained multiple client projects using modern web technologies.",
+    description:
+      "Developed and maintained multiple client projects using modern web technologies.",
     icon: Briefcase,
-    category: "work"
+    category: "work",
   },
-  {
-    title: "Master's in Computer Science",
-    company: "University Name",
-    date: "2018 - 2020",
-    description: "Specialized in Software Engineering and Cloud Computing.",
-    icon: GraduationCap,
-    category: "education"
-  },
+  // {
+  //   title: "Master's in Computer Science",
+  //   company: "University Name",
+  //   date: "2018 - 2020",
+  //   description: "Specialized in Software Engineering and Cloud Computing.",
+  //   icon: GraduationCap,
+  //   category: "education"
+  // },
   {
     title: "Innovation Award",
     company: "Tech Conference",
     date: "2021",
     description: "Recognized for innovative solution in web development.",
     icon: Award,
-    category: "achievement"
-  }
+    category: "achievement",
+  },
 ];
 
 export default function Timeline() {
@@ -47,20 +52,22 @@ export default function Timeline() {
           <VerticalTimelineElement
             key={index}
             className="vertical-timeline-element"
-            contentStyle={{ 
-              background: 'rgba(17, 24, 39, 0.8)',
-              boxShadow: 'none',
-              border: '1px solid rgba(75, 85, 99, 0.3)',
-              borderRadius: '0.75rem',
-              padding: '1.5rem'
+            contentStyle={{
+              background: "rgba(17, 24, 39, 0.8)",
+              boxShadow: "none",
+              border: "1px solid rgba(75, 85, 99, 0.3)",
+              borderRadius: "0.75rem",
+              padding: "1.5rem",
             }}
-            contentArrowStyle={{ borderRight: '7px solid rgba(75, 85, 99, 0.3)' }}
+            contentArrowStyle={{
+              borderRight: "7px solid rgba(75, 85, 99, 0.3)",
+            }}
             date={item.date}
             dateClassName="text-gray-400"
-            iconStyle={{ 
-              background: 'rgb(59, 130, 246)',
-              color: '#fff',
-              boxShadow: '0 0 0 4px rgba(59, 130, 246, 0.2)'
+            iconStyle={{
+              background: "rgb(59, 130, 246)",
+              color: "#fff",
+              boxShadow: "0 0 0 4px rgba(59, 130, 246, 0.2)",
             }}
             icon={<item.icon size={20} />}
           >
