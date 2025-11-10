@@ -5,15 +5,14 @@ import { useInView } from "react-intersection-observer";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured online shopping platform with real-time inventory management",
+    title: "University Website",
+    description: "Created a modern, responsive website for a university  ",
     image:
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    tech: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"],
-    github: "https://github.com",
+    tech: ["TypeScript", "CSS"],
+    github: "https://github.com/Maroun-Assaad/University-Website",
     live: "https://example.com",
-    category: "Full Stack",
+    category: "Frontend",
   },
   /* {
     title: "AI Content Assistant",

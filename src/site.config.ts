@@ -3,23 +3,22 @@ export const siteConfig = {
   role: "Full Stack Developer",
   email: "your.email@example.com",
   socials: {
-    github: "https://github.com/", // replace with actual
-    linkedin: "https://linkedin.com/in/", // replace with actual
+    github: "https://github.com/Maroun-Assaad",
+    linkedin: "https://www.linkedin.com/in/maroun-assaad1/",
   },
   hero: {
     headline: "Hi, I'm Maroun Assaad",
-    subheadline:
-      "Full Stack Developer crafting exceptional digital experiences",
+    subheadline: "Front-End Developer crafting exceptional digital experiences",
     ctaPrimary: "View My Work",
     ctaSecondary: "Get in Touch",
   },
   seo: {
-    title: "Maroun Assaad — Full Stack Developer",
+    title: "Maroun Assaad — Front-End Developer",
     description:
-      "Portfolio of Maroun Assaad, a Full Stack Developer building performant, accessible web applications.",
+      "Portfolio of Maroun Assaad, a Front-End Developer building performant, accessible web applications.",
     keywords: [
       "Maroun Assaad",
-      "Full Stack Developer",
+      "Front-End Developer",
       "React",
       "TypeScript",
       "Portfolio",
