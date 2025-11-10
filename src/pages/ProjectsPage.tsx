@@ -15,7 +15,7 @@ const projects = [
     live: "https://example.com",
     category: "Full Stack",
   },
-  {
+  /* {
     title: "AI Content Assistant",
     description:
       "AI-powered writing assistant that helps create and optimize content",
@@ -25,8 +25,8 @@ const projects = [
     github: "https://github.com",
     live: "https://example.com",
     category: "AI/ML",
-  },
-  {
+  },*/
+  /*{
     title: "Real Estate Platform",
     description:
       "Modern real estate platform with virtual tours and appointment scheduling",
@@ -36,7 +36,7 @@ const projects = [
     github: "https://github.com",
     live: "https://example.com",
     category: "Full Stack",
-  },
+  },*/
 ];
 
 const categories = ["All", "Full Stack", "Frontend", "Backend", "AI/ML"];

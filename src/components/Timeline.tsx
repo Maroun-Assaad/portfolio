@@ -9,22 +9,32 @@ import { Briefcase, GraduationCap, Award } from "lucide-react";
 const timelineData = [
   {
     title: "Front-End Developer",
+    contract: "Part-Time",
     company: "Tech & Beyond LLC",
-    date: "2024 - Present",
+    date: "2023 - Present",
     description:
       "Worked on building responsive web applications for a client of the company.",
     icon: Briefcase,
     category: "work",
   },
   {
-    title: "Full Stack Developer",
-    company: "Digital Agency",
-    date: "2020 - 2022",
-    description:
-      "Developed and maintained multiple client projects using modern web technologies.",
+    title: "Project Lead Implementation",
+    contract: "Internship",
+    company: "Misck",
+    date: "January 2024 - January 2025  ",
+    description: "Project Lead Implementation for MISCK for creating apps.",
     icon: Briefcase,
     category: "work",
   },
+  // {
+  //   title: "Full Stack Developer",
+  //   company: "Digital Agency",
+  //   date: "2020 - 2022",
+  //   description:
+  //     "Developed and maintained multiple client projects using modern web technologies.",
+  //   icon: Briefcase,
+  //   category: "work",
+  // },
   // {
   //   title: "Master's in Computer Science",
   //   company: "University Name",
@@ -33,14 +43,14 @@ const timelineData = [
   //   icon: GraduationCap,
   //   category: "education"
   // },
-  {
-    title: "Innovation Award",
-    company: "Tech Conference",
-    date: "2021",
-    description: "Recognized for innovative solution in web development.",
-    icon: Award,
-    category: "achievement",
-  },
+  // {
+  //   title: "Innovation Award",
+  //   company: "Tech Conference",
+  //   date: "2021",
+  //   description: "Recognized for innovative solution in web development.",
+  //   icon: Award,
+  //   category: "achievement",
+  // },
 ];
 
 export default function Timeline() {
@@ -73,6 +83,7 @@ export default function Timeline() {
           >
             <h3 className="text-xl font-bold text-white mb-1">{item.title}</h3>
             <h4 className="text-blue-400 mb-2">{item.company}</h4>
+            <p className="text-gray-700">{item.contract}</p>
             <p className="text-gray-400">{item.description}</p>
           </VerticalTimelineElement>
         ))}

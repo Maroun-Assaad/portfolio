@@ -11,24 +11,24 @@ const skills = [
     description:
       "Creating responsive and interactive user interfaces with React, TypeScript, and modern CSS.",
   },
-  {
-    name: "Backend Development",
-    icon: Server,
-    description:
-      "Building scalable APIs and server-side applications with Node.js and Python.",
-  },
+  // {
+  //   name: "Backend Development",
+  //   icon: Server,
+  //   description:
+  //     "Building scalable APIs and server-side applications with Node.js and Python.",
+  // },
   {
     name: "UI/UX Design",
     icon: Palette,
     description:
       "Designing intuitive and beautiful user experiences with attention to detail.",
   },
-  {
-    name: "DevOps",
-    icon: Rocket,
-    description:
-      "Managing deployment, CI/CD pipelines, and cloud infrastructure.",
-  },
+  // {
+  //   name: "DevOps",
+  //   icon: Rocket,
+  //   description:
+  //     "Managing deployment, CI/CD pipelines, and cloud infrastructure.",
+  // },
 ];
 
 const technicalSkills = [
@@ -36,8 +36,9 @@ const technicalSkills = [
   { name: "TypeScript", level: 90, color: "bg-blue-500" },
   { name: "Node.js", level: 85, color: "bg-green-500" },
   { name: "Python", level: 80, color: "bg-yellow-500" },
-  { name: "AWS", level: 75, color: "bg-orange-500" },
-  { name: "Docker", level: 70, color: "bg-blue-500" },
+  { name: "Flutter", level: 60, color: "bg-orange-500" },
+  // { name: "AWS", level: 75, color: "bg-orange-500" },
+  // { name: "Docker", level: 70, color: "bg-blue-500" },
 ];
 
 export default function AboutPage() {
